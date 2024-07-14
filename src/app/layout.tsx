@@ -26,7 +26,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Suspense>
-          <GitHubBanner />
           <RefineKbarProvider>
             <DevtoolsProvider>
               <Refine
@@ -34,6 +33,34 @@ export default function RootLayout({
                 dataProvider={dataProvider}
                 authProvider={authProvider}
                 resources={[
+                  {
+                    name: "dashboard",
+                    list: "/dashboard",
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
+                  {
+                    name: "classes",
+                    list: "/classes",
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
+                  {
+                    name: "students",
+                    list: "/students",
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
+                  {
+                    name: "coaches",
+                    list: "/coaches",
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
                   {
                     name: "blog_posts",
                     list: "/blog-posts",
